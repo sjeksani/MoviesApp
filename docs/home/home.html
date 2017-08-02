@@ -1,0 +1,30 @@
+<div ng-controller="homeController as ctrl">
+    <h2 align="center">Your favourite movies here</h2>
+    <div ng-repeat="value in ctrl.obj">
+        <div class="data">
+            <h2 align="center"><a href="">{{value.Title | capitalize:1}}</a></h2>
+            <img src="{{value.Poster}}" ng-click="showDetails = ! showDetails">
+            <div ng-show="showDetails">
+                <p>Year: {{value.Type}}</p>
+                <p>Type: {{value.Year}}</p>
+                <p>Imdb: {{value.imdbID}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+img {
+    width: 450px;
+    height: 320px;
+}
+
+.data {
+    margin-left: 110px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+a:hover {
+    text-decoration: none;
+}
+</style>
