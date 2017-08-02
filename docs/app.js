@@ -5,9 +5,9 @@ app.service("services", function($http) {
         return $http.get("movies.json");
     }
 
-    this.objectNew = function() {
-        return $http.get("http://api.population.io:80/1.0/countries");
-    }
+//     this.objectNew = function() {
+//         return $http.get("http://api.population.io:80/1.0/countries");
+//     }
 });
 
 
@@ -26,11 +26,11 @@ app.controller("homeController", function(services) {
         'West Virginia', 'Wisconsin', 'Wyoming'
     ];
 
-    services.objectNew().then(function(response){
-        that.z = JSON.parse(JSON.stringify(response.data));
+//     services.objectNew().then(function(response){
+//         that.z = JSON.parse(JSON.stringify(response.data));
 
-        console.log(that.z);
-    });
+//         console.log(that.z);
+//     });
 
 
     services.returnedObj().then(function(response) {
