@@ -1,4 +1,4 @@
-var app = angular.module("movie_module", ['routesModule', 'ui.bootstrap']);
+var app = angular.module("movie_module", ['routesModule']);
 
 app.service("services", function($http) {
     this.returnedObj = function() {
