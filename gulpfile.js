@@ -2,7 +2,7 @@ var express = require('express');
 var gulp = require('gulp');
 
 var app = express();
-app.use('/', express.static('public'));
+app.use('/', express.static('docs'));
 
 app.use(function(req, res, next) {
       res.header('Access-Control-Allow-Origin', req.headers.origin);
